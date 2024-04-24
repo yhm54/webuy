@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/mens product.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div id="website-navbar">
+        <div id="logo-and-name">
+            <div id="website-logo">
+                <img src="./images/logo.png" alt="Our Logo">
+            </div>
+            <h1 id="website-name">
+                WeBuy
+            </h1>
+        </div>
+        <div id="search-input-bar">
+            <!-- <input type="search" name="" id=""> -->
+            <input placeholder="Search for products, brands and more" type="text" name="" id="navbar-searchbar">
+            <img src="./images/search icon.png" alt="">
+
+        </div>
+        <div id="greeting-cart-loginout">
+            <div id="greeting">
+                <h3>Hello,&nbsp;</h3>
+                <h3 id="UserName">
+                    <?php 
+                        $connect=mysqli_connect('localhost','root','','WeBuy') or die("Connection Failed");
+                        $sel="SELECT * FROM create_account";
+                        $query=mysqli_query($connect,$sel);
+                        $result=mysqli_fetch_assoc($query);
+                        echo $result['name'];
+                    ?>
+                </h3>
+
+            </div>
+            <div id="shopping-cart">
+                <img src="./images/shopping cart icon.png" alt="">
+            </div>
+            <a href="landing page.html">
+                <div id="login-logout">
+                    <img src="./images/login logout.png" alt="">
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="body">
+        <div class="box1">
+            <div class="ms1"></div>
+            <a href="personal details.html">
+                <input type="submit" class="b1" value="BUY NOW">
+            </a>
+            <div class="des">Brand: DESTINY<br><br>
+                <div style="color:black;font-size: 22px; top: 10px;"> DESTINY Men's Digital Printed Stylish Shirts<br><br></div>
+                <span style="color:red;font-size: 24px">-83% &nbsp;</span>
+                <span style="color:black;font-size: 24px">₹339<br><br></span>
+                <div style="color:rgba(134, 132, 132, 1);font-size: 20px;">M.R.P.: <s>₹1,999</s></div>
+            </div> 
+        </div>
+        <div class="box2">
+            <div class="ms2"></div>
+            <a href="personal details.html">
+                <input type="submit" class="b2" value="BUY NOW">
+            </a>
+            <div class="des">Brand: DIVERSE<br><br>
+                <div style="color:black;font-size: 22px; top: 10px;">DIVERSE Men's Regular Formal Shirts<br><br></div>
+                <span style="color:red;font-size: 24px">-59% &nbsp;</span>
+                <span style="color:black;font-size: 24px">₹489<br><br></span>
+                <div style="color:rgba(134, 132, 132, 1);font-size: 20px;">M.R.P.: <s>₹1,199</s></div>
+            </div> 
+
+        </div>
+        <div class="box3">
+            <div class="ms3"></div>
+            <a href="personal details.html">
+                <input type="submit" class="b3" value="BUY NOW">
+            </a>
+            <div class="des">Brand: NEOSTREAK<br><br>
+                <div style="color:black;font-size: 22px; top: 10px;">NEOSTREAK Men's Slim Fit Stretchable Jeans<br><br></div>
+                <span style="color:red;font-size: 24px">-65% &nbsp;</span>
+                <span style="color:black;font-size: 24px">₹559<br><br></span>
+                <div style="color:rgba(134, 132, 132, 1);font-size: 20px;">M.R.P.: <s>₹1,599</s></div>
+            </div> 
+
+        </div>
+        <div class="box4">
+            <div class="ms4"></div>
+            <a href="personal details.html">
+                <input type="submit" class="b4" value="BUY NOW">
+            </a>
+            <div class="des">Brand: Ben Martin<br><br>
+                <div style="color:black;font-size: 22px; top: 10px;">Ben Martin Men's Full Sleeve Regular Fit Nylon Casual Jacket<br><br></div>
+                <span style="color:red;font-size: 24px">-78% &nbsp;</span>
+                <span style="color:black;font-size: 24px">₹899<br><br></span>
+                <div style="color:rgba(134, 132, 132, 1);font-size: 20px;">M.R.P.: <s>₹3,999</s></div>
+            </div> 
+
+        </div>
+        <div class="box5">
+            <div class="ms5"></div>
+            <a href="personal details.html">
+                <input type="submit" class="b5" value="BUY NOW">
+            </a>
+            <div class="des">Brand: Roadster<br><br>
+                <div style="color:black;font-size: 22px; top: 10px;">Roadster Men Regular Mid Rise Blue Jeans<br><br></div>
+                <span style="color:red;font-size: 24px">-67% &nbsp;</span>
+                <span style="color:black;font-size: 24px">₹582<br><br></span>
+                <div style="color:rgba(134, 132, 132, 1);font-size: 20px;">M.R.P.: <s>₹1,799</s></div>
+            </div> 
+
+        </div>
+        <div class="box6">
+            <div class="ms6"></div>
+            <a href="personal details.html">
+                <input type="submit" class="b6" value="BUY NOW">
+            </a>
+            <div class="des">Brand: EyeBloger<br><br>
+                <div style="color:black;font-size: 22px; top: 10px;">Men Color Block Hooded Neck Red, White, Black T-Shirt<br><br></div>
+                <span style="color:red;font-size: 24px">-80% &nbsp;</span>
+                <span style="color:black;font-size: 24px">₹359<br><br></span>
+                <div style="color:rgba(134, 132, 132, 1);font-size: 20px;">M.R.P.: <s>₹1,299</s></div>
+            </div> 
+
+        </div>
+    </div>
+
+</body>
+
+</html>

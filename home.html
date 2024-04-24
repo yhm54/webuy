@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/home.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div id="website-navbar">
+        <div id="logo-and-name">
+            <div id="website-logo">
+                <img src="./images/logo.png" alt="Our Logo">
+            </div>
+            <h1 id="website-name">
+                WeBuy
+            </h1>
+        </div>
+        <div id="search-input-bar">
+            <input placeholder="Search for products, brands and more" type="text" name="" id="navbar-searchbar">
+            <img src="./images/search icon.png" alt="">
+        </div>
+        <div id="greeting-cart-loginout">
+            <div id="greeting">
+                <h3>Hello,&nbsp;</h3>
+                <h3 id="UserName">
+                    <?php 
+                        $connect=mysqli_connect('localhost','root','','WeBuy') or die("Connection Failed");
+                        $sel="SELECT * FROM create_account";
+                        $query=mysqli_query($connect,$sel);
+                        $result=mysqli_fetch_assoc($query);
+                        echo $result['name'];
+                    ?>
+                </h3>
+
+            </div>
+            <div id="shopping-cart">
+                <img src="./images/shopping cart icon.png" alt="">
+            </div>
+            <a href="landing page.html">
+                <div id="login-logout">
+                    <img src="./images/login logout.png" alt="">
+                </div>
+            </a>
+        </div>
+
+    </div>
+    <div id="website-body">
+        <div id="deal-section">
+            <div id="deal-head">
+                <div id="deal-name"><img src="./images/hotdeal.png" alt=""></div>
+                <div id="deal-product">
+                    <div class="arrow" id="back-arrow"><img src="./images/back_arrow.png" alt=""></div>
+                    <div id="product-image"><img src="./images/deal_product_front.png" alt=""></div>
+                    <div class="arrow" id="front-arrow"><img src="./images/front_arrow.png" alt=""></div>
+                </div>
+            </div>
+            <div id="deal-details">
+                <div class="details-items">BRAND&nbsp;<div class="product-details-editable" id="product-brand-name">TRIPR</div>
+                </div>
+                <div class="details-items">TYPE&nbsp;<div class="product-details-editable" id="product-type">CASUAL JACKET</div>
+                </div>
+                <div class="details-items">COLOR&nbsp;<div class="product-details-editable" id="product-color"> YELLOW-BLACK</div>
+                </div>
+                <div class="details-items">PRICE&nbsp;<div class="product-details-editable" id="product-price">₹499</div>
+                </div>
+                <a href="personal details.html">
+                    <input type="submit" class="buy-now" value="BUY NOW">
+                </a>
+            </div>
+        </div>
+        <div id="other-shopping-links">
+            <div class="different-age-gender-shopping-link">
+                <div class="link-heads"><img src="./images/men's clothing.png" alt=""></div>
+                <div class="link-title">Men's Clothing</div>
+                <a href="mens product.html">
+                    <input type="submit" class="shop-now" value="SHOP NOW">
+                </a>
+            </div>
+            <div class="different-age-gender-shopping-link">
+                <div class="link-heads"><img src="./images/women's clothing.png" alt=""></div>
+                <div class="link-title">Women's Clothing</div>
+                <a href="womens product.html">
+                    <input type="submit" class="shop-now" value="SHOP NOW">
+                </a>
+            </div>
+            <div class="different-age-gender-shopping-link">
+                <div class="link-heads"><img src="./images/kids' clothing.png" alt=""></div>
+                <div class="link-title">Kids' Clothing</div>
+                <a href="kids product.html">
+                    <input type="submit" class="shop-now" value="SHOP NOW">
+                </a>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+    <link href="./css/create account.css" rel="stylesheet" />
+    <title>Create Account</title>
+</head>
+
+<body>
+    <div class="v64_28">
+        <div class="v64_29">
+            <div class="v64_30"></div>
+            <span class="v64_31">Create Account</span>
+            <form action="account.php" method="post">
+                <span class="v64_32">Your Name</span>
+                <input type="text" class="v64_33" name="name" pattern="[A-Za-z]{1,}"
+                    title="Name should only contain Alphabets." required>
+                <span class="v64_35">Mobile Number</span>
+                <input type="phone" class="v64_34" name="mobile" pattern="(7|8|9)\d{9}"
+                    title="Enter a Valid Mobile Number." required>
+                <span class="v64_48">Email</span>
+                <input type="email" class="v64_47" name="email"
+                    pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" title="Must be a valid email address."
+                    required>
+                <span class="v64_50">Password</span>
+                <input type="password" class="v64_49" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,10}"
+                    title="Your password must be at least 6 characters as well as contain at least one uppercase, one lowercase, and one number."
+                    required>
+                <img src="./images/eyec.JPG" onclick="handle()" id="togglePassword">
+                <button type="submit" class="v64_36">Continue</button>
+            </form>
+        </div>
+        <script>
+            function handle() {
+
+                var pass = document.getElementById('password')
+                var eyeicon = document.getElementById('togglePassword')
+
+                if (pass.type == "password") {
+                    pass.type = "text"
+                    eyeicon.src = "./images/eyeo.JPG";
+                } else {
+                    pass.type = "password"
+                    eyeicon.src = "./images/eyec.JPG";
+                }
+            }
+        </script>
+        <a href="login.html">
+            <button type="submit" class="v64_39">Login</button>
+        </a>
+        <div class="v64_41">
+            <div class="name"></div>
+            <div class="name"></div>
+            <span class="v64_44">Already have an account?</span>
+        </div>
+        <div class="logo"></div>
+        <div class="WeBuy"></div>
+    </div>
+</body>
+
+</html>
